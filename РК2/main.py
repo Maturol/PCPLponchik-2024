@@ -79,6 +79,34 @@ ChaDocs = [ # Многие ко многим
     ChaDoc(15,2)
 ]
 
+def first_task(Documents, Chapters):
+        request1 = [(d, list(filter(lambda i: i.documentID == d.documentID, Chapters)))
+                    for d in Documents
+                    if ("Документ" in d.name)
+                    ]
+        return request1
+
+def second_task(Documents, Chapters):
+        request2 = []
+        for d in Documents:
+            d_chapters = list(filter(lambda i: i.documentID == d.documentID, Chapters))
+            Ch_count = []
+            if (len(d_chapters) > 0):
+                Ch_count = [p.num_of_pages for p in d_chapters]
+            Ch_av_count = 0
+            if(len(Ch_count) > 0):
+                Ch_av_count = round(sum(Ch_count) / len(Ch_count), 2)
+            request2.append((d.name, Ch_av_count))
+        request2.sort(key=itemgetter(1), reverse=True)
+        return request2
+
+def third_task(many_to_many):
+        request3 = []
+        for i in many_to_many:
+            if i[0][0] == 'М':
+                request3.append((i[0], i[2]))
+        return request3
+
 def main():
     one_to_many: list = [(d.name, c.name, c.num_of_pages)
                          for c in Chapters
@@ -101,37 +129,17 @@ def main():
     # Запрос E1
     # Вывести список всех документов, которые имеют в названии "Документ", и для каждого документа - список разделов в нём
     print("\nЗапрос E1\n")
-    request1 = [(d, list(filter(lambda i: i.documentID == d.documentID, Chapters)))
-                for d in Documents
-                if ("Документ" in d.name)
-                ]
-    print(request1)
+    print(first_task(Documents, Chapters))
 
     # Запрос E2
     # Вывести список документов со средним количеством страниц в разделах в каждом документе, отсортированных по убыванию
     print ("\nЗапрос E2\n")
-    request2 = []
-    for d in Documents:
-        d_chapters = list(filter(lambda i: i.documentID == d.documentID, Chapters))
-        Ch_count = []
-        if (len(d_chapters) > 0):
-            Ch_count = [p.num_of_pages for p in d_chapters]
-        Ch_av_count = 0
-        if(len(Ch_count) > 0):
-            Ch_av_count = round(sum(Ch_count) / len(Ch_count), 2)
-        request2.append((d.name, Ch_av_count))
-    request2.sort(key=itemgetter(1), reverse=True)
-    print(request2)
+    print(second_task(Documents, Chapters))
 
     # Запрос E3
     # Вывести список разделов, название которых начинается с буквы "М", и названия их документов
     print("\nЗапрос E3\n")
-    request3 = []
-    for i in many_to_many:
-        if i[0][0] == 'М':
-            request3.append((i[0], i[2]))
-    print(request3)
-
+    print(third_task(many_to_many))
 
 if (__name__ == "__main__"):
     main()
