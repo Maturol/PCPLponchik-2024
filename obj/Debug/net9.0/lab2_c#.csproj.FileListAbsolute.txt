@@ -1,0 +1,15 @@
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.AssemblyInfoInputs.cache
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.AssemblyInfo.cs
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.csproj.CoreCompileInputs.cache
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.sourcelink.json
+D:\VS Code\Бауманка\bin\Debug\net9.0\lab2_c#.exe
+D:\VS Code\Бауманка\bin\Debug\net9.0\lab2_c#.deps.json
+D:\VS Code\Бауманка\bin\Debug\net9.0\lab2_c#.runtimeconfig.json
+D:\VS Code\Бауманка\bin\Debug\net9.0\lab2_c#.dll
+D:\VS Code\Бауманка\bin\Debug\net9.0\lab2_c#.pdb
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.dll
+D:\VS Code\Бауманка\obj\Debug\net9.0\refint\lab2_c#.dll
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.pdb
+D:\VS Code\Бауманка\obj\Debug\net9.0\lab2_c#.genruntimeconfig.cache
+D:\VS Code\Бауманка\obj\Debug\net9.0\ref\lab2_c#.dll
